@@ -1,8 +1,8 @@
 import React from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import { ReactComponent as NxLogo } from '../public/nx-logo-white.svg';
 import './styles.css';
+import Footer from '../../../libs/Footer';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
@@ -11,13 +11,10 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <title>Welcome to portfolio!</title>
       </Head>
       <div className="app">
-        <header className="flex">
-          <NxLogo width="75" height="50" />
-          <h1>Welcome to portfolio!</h1>
-        </header>
         <main>
           <Component {...pageProps} />
         </main>
+        <Footer />
       </div>
     </>
   );
